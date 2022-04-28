@@ -223,7 +223,8 @@ http://localhost:8080/swagger-ui/index.htm
                 
 ### FlowChart
 
-```flow
+```mermaid
+flow
 st=>start: signup
 op=>operation: Login operation
 cond=>condition: Successful Yes or No?
