@@ -1,7 +1,7 @@
 # barak-banking
 Banking Application Assignment: Backend Engineering Role
 
-### Features
+##Features
 
 - Creation of account
 - Deletion of account
@@ -12,7 +12,32 @@ Banking Application Assignment: Backend Engineering Role
 - Getting the balance
 - List of account
 
-### Sequence Diagram
+## Tools
+
+- SpringBoot
+- SpringSecurity
+- H2DB
+- OpenAPI
+- JDK 1.11
+- Maven 3
+
+## Installation & Running
+
+#### IDE
+> you can run the application using intellij 
+> import the app and run BarkaApplication
+
+#### DOCKER
+````shell
+docker build --tag=barka-application:latest .
+docker run -p8081:8080 barka-application:latest
+````
+#### DOCKER
+```shell
+mvn spring-boot:run
+```
+
+## Sequence Diagram
                     
 ```mermaid
 sequenceDiagram
@@ -46,7 +71,7 @@ BE-->FE: reference number
 ```
 
 
-### API Contract
+## API Contract
 
 #### Signup
 URL
