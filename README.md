@@ -12,18 +12,10 @@ Banking Application Assignment: Backend Engineering Role
 - Getting the balance
 - List of account
 
-###Blockquotes
 
-> Blockquotes
+### API Contract
 
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
-
-
-###API Contract
-
-####Signup
+#### Signup
 URL
 ```
 http://localhost:8080/api/v1/customer/signup
@@ -71,7 +63,7 @@ Response:- existing customer
   "description": "INTERNAL_SERVER_ERROR"
 }
 ```
-####Login
+#### Login
 URL:-
 ```
 http://localhost:8080/api/v1/customer/auth
@@ -97,7 +89,7 @@ Response:-
   "description": "UNAUTHORIZED_ERROR"
 }
 ```
-####Create Account
+#### Create Account
 URL:-
 ```
 http://localhost:8080/internal/v1/account
@@ -120,7 +112,7 @@ Response:-
     "accountType": "CURRENT"
 }
 ```
-####Account List &  Balance
+#### Account List &  Balance
 URL:-
 ```
 http://localhost:8080/internal/v1/account/
@@ -136,12 +128,12 @@ Response:-
     }
 ]
 ```
-####Close Account
+#### Close Account
 URL:-
 ```
 http://localhost:8080/internal/v1/account/account?accountNo={accountNo}
 ```
-####Money Deposit
+#### Money Deposit
 URL:-
 ```
 http://localhost:8080/webhook/v1/money/deposit
@@ -164,7 +156,7 @@ Response:-
 }
 ```
 
-####Money Withdrwal
+#### Money Withdrwal
 URL:-
 ```
 http://localhost:8080/webhook/v1/money/withdraw
@@ -187,7 +179,7 @@ Response:-
 }
 ```
 
-####Local Transfer
+#### Local Transfer
 URL:-
 ```
 http://localhost:8080/internal/v1/transfer/local
@@ -218,7 +210,7 @@ Response:-
     "description": "INTERNAL_SERVER_ERROR"
 }
 ```
-####International Transfer
+#### International Transfer
 URL:-
 ```
 http://localhost:8080/internal/v1/transfer/International
@@ -229,7 +221,7 @@ http://localhost:8080/internal/v1/transfer/International
 http://localhost:8080/swagger-ui/index.htm
 `
                 
-###FlowChart
+### FlowChart
 
 ```flow
 st=>start: signup
@@ -242,7 +234,7 @@ cond(yes)->e
 cond(no)->op
 ```
 
-###Sequence Diagram
+### Sequence Diagram
                     
 ```seq
 FE->BE: signup 
@@ -274,4 +266,4 @@ BE->DB:save to account transaction
 BE-->FE: reference number 
 ```
 
-###End
+### End
