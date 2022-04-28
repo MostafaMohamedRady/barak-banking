@@ -49,7 +49,7 @@ public class TransactionServiceImpl implements TransactionService {
         log.info("money-withdraw from account no [{}]", request.getAccountNo());
         Account account = accountService.creditMoney(request);
         TransactionEntity transactionEntity = TransactionEntity.builder()
-                .transactionType(TransactionType.DEBIT)
+                .transactionType(TransactionType.CREDIT)
                 .account(account)
                 .transactionDescription(AppConstant.ATM_WITHDRAW)
                 .transactionAmount(request.getAmount())
