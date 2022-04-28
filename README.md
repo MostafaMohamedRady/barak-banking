@@ -236,7 +236,8 @@ cond(no)->op
 
 ### Sequence Diagram
                     
-```sequenceDiagram
+```mermaid
+sequenceDiagram
 FE->BE: signup 
 Note right of BE: request validation 
 BE-->FE: user 
