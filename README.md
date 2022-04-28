@@ -12,6 +12,39 @@ Banking Application Assignment: Backend Engineering Role
 - Getting the balance
 - List of account
 
+### Sequence Diagram
+                    
+```mermaid
+sequenceDiagram
+FE->BE: signup 
+Note right of BE: request validation 
+BE-->FE: user 
+FE->>BE: login
+Note right of BE: validate username\npassword 
+BE-->FE: token 
+FE->BE: create account 
+Note right of BE: validate acount details 
+BE->DB:save account
+BE-->FE: accountNo 
+FE->BE: money-deposit
+BE->BE:check-account-active
+BE->DB:topup account balance \n save transaction
+BE-->FE: reference number 
+FE->BE: money-withdrwal
+BE->BE:check-account-active \n check-balance
+BE->DB:deduct from account balance \n save transaction
+BE-->FE: reference number 
+FE->BE: local-transfer
+BE->BE:check-from-account-active
+BE->BE:check-from-account-balance
+BE->DB:deduct from account balance 
+BE->DB:save from account transaction 
+BE->BE:check-to-account-active
+BE->DB:topup to account balance 
+BE->DB:save to account transaction 
+BE-->FE: reference number 
+```
+
 
 ### API Contract
 
@@ -220,52 +253,4 @@ http://localhost:8080/internal/v1/transfer/International
 `
 http://localhost:8080/swagger-ui/index.htm
 `
-                
-### FlowChart
-
-```mermaid
-flow
-st=>start: signup
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: token
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-### Sequence Diagram
-                    
-```mermaid
-sequenceDiagram
-FE->BE: signup 
-Note right of BE: request validation 
-BE-->FE: user 
-FE->>BE: login
-Note right of BE: validate username\npassword 
-BE-->FE: token 
-FE->BE: create account 
-Note right of BE: validate acount details 
-BE->DB:save account
-BE-->FE: accountNo 
-FE->BE: money-deposit
-BE->BE:check-account-active
-BE->DB:topup account balance \n save transaction
-BE-->FE: reference number 
-FE->BE: money-withdrwal
-BE->BE:check-account-active \n check-balance
-BE->DB:deduct from account balance \n save transaction
-BE-->FE: reference number 
-FE->BE: local-transfer
-BE->BE:check-from-account-active
-BE->BE:check-from-account-balance
-BE->DB:deduct from account balance 
-BE->DB:save from account transaction 
-BE->BE:check-to-account-active
-BE->DB:topup to account balance 
-BE->DB:save to account transaction 
-BE-->FE: reference number 
-```
-
 ### End
