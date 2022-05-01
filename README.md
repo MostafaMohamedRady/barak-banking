@@ -74,7 +74,7 @@ BE-->FE: reference number
 ## API Contract
 
 #### Postman Collection
-[postman_collection](https://github.com/MostafaMohamedRady/barak-banking/files/8599021/baraka-application.postman_collection.json.zip)
+[postman_collection.zip](https://github.com/MostafaMohamedRady/barak-banking/files/8599021/baraka-application.postman_collection.json.zip)
 
 #### Signup
 URL
