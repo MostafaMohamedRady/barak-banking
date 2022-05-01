@@ -1,7 +1,7 @@
 # barak-banking
 Banking Application Assignment: Backend Engineering Role
 
-##Features
+## Features
 
 - Creation of account
 - Deletion of account
