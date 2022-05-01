@@ -77,10 +77,10 @@ BE-->FE: reference number
 [postman_collection.zip](https://github.com/MostafaMohamedRady/barak-banking/files/8599021/baraka-application.postman_collection.json.zip)
 
 #### Signup
-URL
-```
+````
+URL :-
 http://localhost:8080/api/v1/customer/signup
-```
+
 Request
 ```
 {
