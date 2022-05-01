@@ -73,6 +73,9 @@ BE-->FE: reference number
 
 ## API Contract
 
+#### Postman Collection
+![postman link](https://www.getpostman.com/collections/833123638d41b5bd63b7)
+
 #### Signup
 URL
 ```
