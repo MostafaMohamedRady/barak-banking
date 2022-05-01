@@ -32,7 +32,7 @@ Banking Application Assignment: Backend Engineering Role
 docker build --tag=barka-application:latest .
 docker run -p8081:8080 barka-application:latest
 ````
-#### DOCKER
+#### maven
 ```shell
 mvn spring-boot:run
 ```
