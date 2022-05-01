@@ -81,8 +81,7 @@ BE-->FE: reference number
 URL :-
 http://localhost:8080/api/v1/customer/signup
 
-Request
-```
+Request :-
 {
   "Email": "email@gmail.com",
   "password": "password",
@@ -91,9 +90,8 @@ Request
   "eidNo": "748-1992-000-00",
   "address": "address"
 }
-```
+
 Response :- 200
-```
 {
   "id": 1,
   "cif": "1519056425",
@@ -105,25 +103,26 @@ Response :- 200
   "email": "email@gmail.com",
   "accounts": null
 }
-```
+
 Response:- validation error
-```
+
 {
   "statusCode": 400,
   "timestamp": "2022-04-28T08:50:27.100+00:00",
   "message": "[FieldName:-email, ErrorMessage:-Email is required]",
   "description": "VALIDATION_ERROR"
 }
-```
+
 Response:- existing customer
-```
+
 {
   "statusCode": 500,
   "timestamp": "2022-04-28T08:59:25.523+00:00",
   "message": "There is a customer exist with same email",
   "description": "INTERNAL_SERVER_ERROR"
 }
-```
+````
+
 #### Login
 URL:-
 ```
